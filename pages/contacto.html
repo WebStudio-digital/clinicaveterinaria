@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | PetCare</title>
+    <!-- Hoja de estilos general de la web -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Pet<span>Care</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav class="nav-menu" id="nav-list">
+                <a href="../index.html">Inicio</a>
+                <a href="./servicios.html">Servicios</a>
+                <a href="./urgencias.html">Urgencias</a>
+                <a href="#" class="btn-nav nav-active-btn">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Ponte en Contacto</h1>
+                <p>Reserva un turno programado o envíanos tus dudas informativas.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Formulario -->
+                <form id="contact-form" action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" required placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="pet-type">Tipo de Mascota</label>
+                        <select id="pet-type">
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje / Motivo de consulta</label>
+                        <textarea id="message" rows="4" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Enviar Solicitud</button>
+                </form>
+
+                <!-- Datos Informativos -->
+                <div class="contact-info">
+                    <div class="info-block">
+                        <h3>📍 Ubicación Central</h3>
+                        <p>Av. Principal 123, Barrio Norte. Estacionamiento gratuito para clientes.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>📞 Teléfonos de Atención</h3>
+                        <p>Consultas: +1 234 567 89<br>Urgencias 24h: +1 234 567 00</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>📧 Correos Electrónicos</h3>
+                        <p>Administración: info@petcare.com<br>Citas médicos: citas@petcare.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <a href="#" class="logo-footer">Pet<span>Care</span></a>
+            <p>Cuidamos de tus compañeros de vida con el amor y profesionalismo que se merecen.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#urgencias">Urgencias</a></li>
+                <li><a href="#">Políticas de Privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>📍 Av. Principal 123, Ciudad</p>
+            <p>📞 +1 234 567 89</p>
+            <p>✉️ contacto@petcare.com</p>
+            <p>⏰ Lun - Sáb: 8:00 - 20:00</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 PetCare. Todos los derechos reservados. Diseñado para portafolio.</p>
+    </div>
+</footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

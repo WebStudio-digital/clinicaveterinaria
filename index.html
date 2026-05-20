@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | Clínica Veterinaria</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Iconos sugeridos: FontAwesome o Lucide -->
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo">Pet<span>Care</span></a>
+        <!-- Botón Hamburguesa visible solo en móviles -->
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-menu" id="nav-list">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="./pages/servicios.html">Servicios</a>
+            <a href="./pages/urgencias.html">Urgencias</a>
+            <a href="./pages/contacto.html" class="btn-nav">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>El cuidado que tu mejor amigo merece</h1>
+                <p>Ofrecemos atención médica integral, peluquería y urgencias 24/7 con profesionales apasionados por los animales.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Agendar Cita</a>
+                    <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Reemplazar con tu imagen local en assets/img/ -->
+                <img src="https://unsplash.com" alt="Veterinaria cuidando un perro">
+            </div>
+        </div>
+    </section>
+
+    <!-- EMERGENCY BANNER -->
+    <section id="urgencias" class="emergency-banner">
+        <div class="container banner-flex">
+            <h2>🚨 ¿Tienes una emergencia médica con tu mascota?</h2>
+            <p>Atendemos las 24 horas del día, los 365 días del año.</p>
+            <a href="tel:+123456789" class="btn btn-emergency">Llamar Ahora</a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Todo lo que necesitas para mantener su salud y felicidad en un solo lugar.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">🩺</div>
+                    <h3>Consulta General</h3>
+                    <p>Chequeos preventivos, vacunación completa y desparasitación para mantenerlos sanos.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Estética y Spa</h3>
+                    <p>Corte de pelo, baño terapéutico y cuidado higiénico adaptado a cada raza.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Laboratorio</h3>
+                    <p>Análisis clínicos rápidos y radiografías digitales para diagnósticos precisos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <a href="#" class="logo-footer">Pet<span>Care</span></a>
+            <p>Cuidamos de tus compañeros de vida con el amor y profesionalismo que se merecen.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#urgencias">Urgencias</a></li>
+                <li><a href="#">Políticas de Privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>📍 Av. Principal 123, Ciudad</p>
+            <p>📞 +1 234 567 89</p>
+            <p>✉️ contacto@petcare.com</p>
+            <p>⏰ Lun - Sáb: 8:00 - 20:00</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 PetCare. Todos los derechos reservados. Diseñado para portafolio.</p>
+    </div>
+</footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

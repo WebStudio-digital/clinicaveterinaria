@@ -1,0 +1,485 @@
+/* VARIABLES DE DISEÑO (Colores y Fuentes) */
+:root {
+    --primary-color: #0ea5e9; /* Azul veterinario/médico moderno */
+    --secondary-color: #0f172a; /* Gris oscuro para textos principales */
+    --accent-color: #22c55e; /* Verde para acentos positivos */
+    --danger-color: #ef4444; /* Rojo para emergencias */
+    --bg-light: #f8fafc; /* Fondo claro para secciones */
+    --text-muted: #64748b; /* Gris para descripciones secundarios */
+    --white: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--secondary-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* COMPONENTES REUTILIZABLES */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #0284c7;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu .btn-nav {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+}
+
+.nav-menu .btn-nav:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    margin-right: 1rem;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* EMERGENCY BANNER */
+.emergency-banner {
+    background-color: var(--danger-color);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.banner-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-emergency {
+    background-color: var(--white);
+    color: var(--danger-color);
+}
+
+.btn-emergency:hover {
+    background-color: #fee2e2;
+    transform: scale(1.05);
+}
+
+/* SERVICES SECTION */
+.services {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* RETOQUES PARA MENÚ HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+/* ESTILOS DEL FOOTER */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 4rem 0 1rem 0;
+    margin-top: 5rem;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.logo-footer {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+}
+.logo-footer span {
+    color: var(--primary-color);
+}
+.footer-brand p {
+    color: var(--text-muted);
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+.footer-links h3, .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: var(--white);
+    position: relative;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+.footer-links ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links ul li a:hover {
+    color: var(--primary-color);
+}
+.footer-contact p {
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ESTILOS ESPECÍFICOS PARA LA PÁGINA DE CONTACTO */
+
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header p {
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Estilos del Formulario */
+.contact-form {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--white);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.btn-submit {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Bloque lateral de información */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.info-block h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-block p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Botón de la barra de navegación activo */
+.nav-active-btn {
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
+}
+
+
+
+
+/* RESPONSIVE FOOTER Y NAVBAR */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 2rem;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu a {
+        margin: 1rem 0;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    .footer-brand p {
+        margin: 0 auto 1.5rem auto;
+    }
+    /* Animación del botón hamburguesa */
+    .menu-toggle.open .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.open .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.open .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+
+.hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-buttons .btn {
+        margin: 0.5rem;
+    }
+    .nav-menu {
+        display: none; /* Ideal para implementar menú hamburguesa con JS posterior */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .contact-info {
+        text-align: center;
+        gap: 2rem;
+    }
+
+}
+
+
+
